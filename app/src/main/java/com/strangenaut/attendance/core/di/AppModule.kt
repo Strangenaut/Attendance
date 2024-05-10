@@ -21,10 +21,4 @@ object AppModule {
     fun provideApplication(@ApplicationContext app: Context): AttendanceApp {
         return app as AttendanceApp
     }
-
-    @Provides
-    @Singleton
-    fun provideFirebaseFirestore(): FirebaseFirestore {
-        return Firebase.firestore
-    }
 }

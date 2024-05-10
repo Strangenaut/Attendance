@@ -5,7 +5,7 @@ sealed class AuthEvent {
     data class SignIn(
         val email: String,
         val password: String,
-        val navigateToMainScreen: () -> Unit
+        val onNavigateToMainScreen: () -> Unit
     ) : AuthEvent()
 
     data class SendPasswordResetEmail(val email: String): AuthEvent()
@@ -16,12 +16,12 @@ sealed class AuthEvent {
         val email: String,
         val password: String,
         val passwordRepetition: String,
-        val navigateToVerification: () -> Unit
+        val onNavigateToVerification: () -> Unit
     ) : AuthEvent()
 
     data object SendVerificationEmail : AuthEvent()
 
-    data class WaitForVerification(val navigateToRegistration: () -> Unit) : AuthEvent()
+    data class WaitForVerification(val onNavigateToRegistration: () -> Unit) : AuthEvent()
 
     data class Register(
         val name: String,
@@ -29,10 +29,8 @@ sealed class AuthEvent {
         val school: String,
         val department: String,
         val group: String,
-        val navigateToMainScreen: () -> Unit
+        val onNavigateToMainScreen: () -> Unit
     ) : AuthEvent()
-
-    data class SignOut(val navigateToAuthScreen: () -> Unit) : AuthEvent()
 
     data object DeleteCurrentUser : AuthEvent()
 }

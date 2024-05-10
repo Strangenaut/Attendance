@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.strangenaut.attendance.core.components.HorizontalLine
 
 @Composable
 fun TopBar(
@@ -23,6 +22,7 @@ fun TopBar(
         HorizontalLine(
             height = 1.dp,
             color = MaterialTheme.colorScheme.outline,
+            modifier = Modifier.fillMaxWidth()
         )
     }
 }

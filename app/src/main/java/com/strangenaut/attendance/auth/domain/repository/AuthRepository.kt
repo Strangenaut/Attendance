@@ -1,12 +1,11 @@
 package com.strangenaut.attendance.auth.domain.repository
 
-import com.google.firebase.auth.FirebaseUser
 import com.strangenaut.attendance.core.domain.model.User
 import com.strangenaut.attendance.core.domain.model.Response
 
 interface AuthRepository {
 
-    val currentUser: FirebaseUser?
+    val currentUserEmail: String?
 
     val isUserAlreadySignedIn: Boolean
 
@@ -14,7 +13,11 @@ interface AuthRepository {
 
     suspend fun signInWithEmailAndPassword(email: String, password: String): Response
 
-    suspend fun signUpWithEmailAndPassword(email: String, password: String): Response
+    suspend fun signUpWithEmailAndPassword(
+        email: String,
+        password: String,
+        passwordRepetition: String
+    ): Response
 
     suspend fun registerAccount(user: User): Response
 

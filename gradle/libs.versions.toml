@@ -1,7 +1,7 @@
 [versions]
-accompanistSystemuicontroller = "0.35.0-alpha"
 agp = "8.3.0-alpha07"
-cameraxVersion = "1.4.0-alpha02"
+cameraxVersion = "1.4.0-alpha04"
+commonsNet = "3.6"
 core = "3.4.0"
 googleServices = "4.4.1"
 kotlin = "1.9.0"
@@ -11,19 +11,19 @@ androidx-test-ext-junit = "1.1.5"
 espresso-core = "3.5.1"
 lifecycle-runtime-ktx = "2.7.0"
 activity-compose = "1.8.2"
-compose-bom = "2024.03.00"
+compose-bom = "2024.04.00"
 firebase-auth-ktx = "22.3.1"
 play-services-auth = "21.0.0"
-firebase-auth = "22.3.1"
 lifecycle-viewmodel-compose = "2.7.0"
 navigation-compose = "2.7.7"
 lifecycle-runtime-compose = "2.7.0"
 hilt-android-gradle-plugin = "2.48.1"
 hiltCompiler = "1.2.0"
-firebase-firestore = "24.11.0"
+firebase-firestore = "24.11.1"
 firebaseDatabaseKtx = "20.3.1"
 
 [libraries]
+commons-net = { module = "commons-net:commons-net", version.ref = "commonsNet" }
 core = { module = "com.google.zxing:core", version.ref = "core" }
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
 google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
@@ -60,4 +60,3 @@ firebase-database-ktx = { group = "com.google.firebase", name = "firebase-databa
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-

@@ -1,4 +1,113 @@
 <resources>
     <string name="app_name">Attendance</string>
-    <string name="web_client_id">236246058573-qosojpt169bip5cc29ne8tgcuap05ill.apps.googleusercontent.com</string>
+    <string name="web_client_id" translatable="false">236246058573-qosojpt169bip5cc29ne8tgcuap05ill.apps.googleusercontent.com</string>
+
+    <!-- Exceptions -->
+    <string name="no_connection">No connection</string>
+    <string name="wrong_login_or_password">Wrong login or password</string>
+    <string name="weak_password">Weak password. You need at least 6 characters</string>
+    <string name="address_exists">The user with such email is already registered</string>
+    <string name="passwords_do_not_match">Passwords do not match</string>
+    <string name="unexpected_error">Unexpected error</string>
+    <string name="discipline_exists">Such discipline already exists</string>
+    <string name="qr_code_expired">QR code expired</string>
+
+    <!-- Authentication -->
+    <string name="what_is_your_email">What is your email?</string>
+    <string name="enter_email">Enter email</string>
+    <string name="what_is_your_password">What is your password?</string>
+    <string name="enter_password">Enter password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="no_account">No account?</string>
+    <string name="create_password">Create a new password</string>
+    <string name="repeat_created_password">Repeat your password</string>
+    <string name="repeat_password">Enter password again</string>
+    <string name="verification_request_sent">
+        Request for verification was sent to your email
+    </string>
+    <string name="send_again">Send again</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="send_request">Send request</string>
+    <string name="until_resending">Time left until resending: %1$d s</string>
+    <string name="name">Name</string>
+    <string name="enter_name">Enter name</string>
+    <string name="surname">Surname</string>
+    <string name="enter_surname">Enter surname</string>
+    <string name="school">School / university</string>
+    <string name="enter_school">Enter school / university</string>
+    <string name="department">Department / institute / faculty</string>
+    <string name="enter_department">Enter department</string>
+    <string name="group">Group</string>
+    <string name="enter_group">Enter group</string>
+    <string name="register">Register</string>
+
+    <!-- Home -->
+    <string name="add_discipline">Add discipline</string>
+    <string name="what_is_discipline_name">What is the name of a discipline?</string>
+    <string name="enter_discipline_name">Enter discipline</string>
+    <string name="save">Save</string>
+    <string name="choose_discipline">Choose discipline</string>
+    <string name="participants_list">List of participants</string>
+    <string name="stop_lesson">Stop lesson</string>
+    <string name="join">Join</string>
+    <string name="scan_qr">Scan QR code on teacher\'s device</string>
+    <string name="statistics">Statistics</string>
+    <string name="lessons_attended">lessons attended</string>
+    <string name="lessons_hosted">lessons conducted</string>
+    <string name="join_description">
+        You can join by putting your phone to the teacher\'s phone
+        or by scanning the QR code. If you do not have internet connection
+        or if you are experiencing other problems, ask the teacher
+        to manually mark you for the class
+    </string>
+    <string name="host">Begin lesson</string>
+    <string name="host_description">
+        Select an existing item or add a new item to start a session.
+        Students can be connected by QR code, but you can also add
+        students manually.
+    </string>
+    <string name="updating_qr">Updating QR code…</string>
+
+    <!-- Statistics -->
+    <string name="attended">attended</string>
+    <string name="empty">It\'s empty in here</string>
+    <string name="lesson_attended">Lesson attended</string>
+    <string name="teacher">Teacher</string>
+    <string name="lesson_hosted">Lesson conducted</string>
+    <string name="participants">Participants</string>
+    <string name="date_of_hosting">Date and time of the lesson</string>
+    <string name="participants_count">Participants:</string>
+    <string name="history">History</string>
+    <string name="attendances">Attendances</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="personal_info">Personal information</string>
+    <string name="app_version">Version:</string>
+    <string name="sign_out">Sign out</string>
+    <string name="theme">Theme</string>
+    <string name="system_theme">System</string>
+    <string name="light_theme">Light</string>
+    <string name="dark_theme">Dark</string>
+
+    <!-- Dates -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+
+    <!-- Months -->
+    <string name="january">January %1$d</string>
+    <string name="february">February %1$d</string>
+    <string name="march">March %1$d</string>
+    <string name="april">April %1$d</string>
+    <string name="may">May %1$d</string>
+    <string name="june">June %1$d</string>
+    <string name="july">July %1$d</string>
+    <string name="august">August %1$d</string>
+    <string name="september">September %1$d</string>
+    <string name="october">October %1$d</string>
+    <string name="november">November %1$d</string>
+    <string name="december">December %1$d</string>
+
+    <!-- Other -->
+    <string name="copied_to_clipboard">Copied to clipboard</string>
 </resources>

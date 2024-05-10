@@ -1,11 +1,12 @@
 package com.strangenaut.attendance.auth.presentation
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -53,10 +54,13 @@ fun AuthScreen(
         verticalArrangement = Arrangement.SpaceBetween,
         modifier = Modifier.fillMaxSize()
     ) {
-        Image(
+        Icon(
             painter = painterResource(R.drawable.app_icon),
             contentDescription = null,
-            modifier = Modifier.fillMaxHeight(0.35f)
+            tint = MaterialTheme.colorScheme.primary,
+            modifier = Modifier
+                .padding(top = 32.dp)
+                .fillMaxHeight(0.35f)
         )
         val navController = rememberNavController()
 

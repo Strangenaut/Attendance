@@ -1,6 +1,5 @@
 package com.strangenaut.attendance.home.presentation.components
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
@@ -24,7 +23,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.strangenaut.attendance.R
-import com.strangenaut.attendance.core.components.HorizontalLine
+import com.strangenaut.attendance.core.presentation.components.HorizontalLine
 import com.strangenaut.attendance.core.ui.theme.SurfaceShape
 
 @Composable
@@ -60,12 +59,14 @@ fun IconTextButtonWithDescription(
                 modifier = Modifier.fillMaxWidth()
             ) {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    Image(
+                    Icon(
                         painter = iconPainter,
-                        contentDescription = title
+                        contentDescription = title,
+                        tint = MaterialTheme.colorScheme.primary
                     )
                     Text(
                         text = title,
+                        color = MaterialTheme.colorScheme.onSurface,
                         style = MaterialTheme.typography.titleLarge,
                         modifier = Modifier.padding(horizontal = 16.dp)
                     )
@@ -76,9 +77,11 @@ fun IconTextButtonWithDescription(
                 )
             }
             HorizontalLine(
-                modifier = Modifier.padding(top = 12.dp),
                 height = 1.dp,
-                color = MaterialTheme.colorScheme.outlineVariant
+                color = MaterialTheme.colorScheme.outlineVariant,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp)
             )
             Text(
                 modifier = Modifier.padding(
@@ -87,6 +90,7 @@ fun IconTextButtonWithDescription(
                     end = 8.dp
                 ),
                 text = description,
+                color = MaterialTheme.colorScheme.onSurface,
                 style = MaterialTheme.typography.labelSmall,
                 textAlign = TextAlign.Justify
             )
@@ -100,7 +104,7 @@ private fun IconTextButtonWithDescriptionPreview() {
     IconTextButtonWithDescription(
         iconPainter = painterResource(R.drawable.connect),
         title = "Button",
-        description = "Very very long description of this button'ss functionality and further use",
+        description = "Very very long description of this button's functionality and further use",
         onClick = {}
     )
 }

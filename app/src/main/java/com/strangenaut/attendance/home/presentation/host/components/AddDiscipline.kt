@@ -11,11 +11,13 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.strangenaut.attendance.core.components.LabeledTextField
-import com.strangenaut.attendance.core.components.LabeledTopBar
-import com.strangenaut.attendance.core.components.TextButton
+import com.strangenaut.attendance.R
+import com.strangenaut.attendance.core.presentation.components.LabeledTextField
+import com.strangenaut.attendance.core.presentation.components.LabeledTopBarWithNavBack
+import com.strangenaut.attendance.core.presentation.components.TextButton
 
 @Composable
 fun AddDiscipline(
@@ -28,8 +30,8 @@ fun AddDiscipline(
 
     Scaffold(
         topBar = {
-            LabeledTopBar(
-                label = "Добавить новый предмет",
+            LabeledTopBarWithNavBack(
+                label = stringResource(R.string.add_discipline),
                 onNavigateBack = onNavigateBack
             )
         }
@@ -42,15 +44,15 @@ fun AddDiscipline(
         ) {
             LabeledTextField(
                 initialValue = discipline,
-                label = "Как называется предмет?",
-                hint = "Введите название предмета",
+                label = stringResource(R.string.what_is_discipline_name),
+                hint = stringResource(R.string.enter_discipline_name),
                 modifier = Modifier.padding(top = 16.dp),
                 onValueChange = { value ->
                     discipline = value
                 }
             )
             TextButton(
-                text = "Сохранить",
+                text = stringResource(R.string.save),
                 onClick = {
                     if (discipline.isNotEmpty()) {
                         onAddDiscipline(discipline)

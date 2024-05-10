@@ -1,29 +1,40 @@
 package com.strangenaut.attendance.core.ui.theme
 
+import android.app.Activity
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.material.icons.Icons
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
-import androidx.compose.material3.dynamicDarkColorScheme
-import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 
 private val DarkColorScheme = darkColorScheme(
-    primary = PrussianGreen
+    primary = PrussianGreen,
+    background = Shark,
+    surface = OuterSpace,
+    onSurface = Color.White,
+    onSurfaceVariant = Emperor,
+    outline = MineShaft,
+    outlineVariant = Emperor,
+    error = Thunderbird
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = PrussianGreen,
-    background = Color.White,
-    surface = SurfaceGray,
+    background = BlackSqueeze,
+    surface = AquaHaze,
     onSurface = Color.Black,
-    surfaceVariant = DisabledGray,
-    outline = MuffledGray,
-    outlineVariant = TransparentGray
+    onSurfaceVariant = DisabledGray,
+    outline = AthensGray,
+    outlineVariant = TransparentGray,
+    error = Thunderbird
 )
 
 @RequiresApi(Build.VERSION_CODES.Q)
@@ -37,6 +48,18 @@ fun AttendanceTheme(
         else -> LightColorScheme
     }
 
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as Activity).window
+            window.statusBarColor = colorScheme.background.toArgb()
+            window.navigationBarColor = colorScheme.background.toArgb()
+
+            val windowInsetsController = WindowCompat.getInsetsController(window, view)
+            windowInsetsController.isAppearanceLightStatusBars = !darkTheme
+            windowInsetsController.isAppearanceLightNavigationBars = !darkTheme
+        }
+    }
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,

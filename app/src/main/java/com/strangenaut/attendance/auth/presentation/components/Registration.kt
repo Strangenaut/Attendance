@@ -11,10 +11,12 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
-import com.strangenaut.attendance.core.components.LabeledTextField
-import com.strangenaut.attendance.core.components.TextButton
+import com.strangenaut.attendance.R
+import com.strangenaut.attendance.core.presentation.components.LabeledTextField
+import com.strangenaut.attendance.core.presentation.components.TextButton
 
 @Composable
 fun Registration(
@@ -50,8 +52,8 @@ fun Registration(
     ) {
         LabeledTextField(
             initialValue = name,
-            label = "Имя",
-            hint = "Введите имя",
+            label = stringResource(R.string.name),
+            hint = stringResource(R.string.enter_name),
             keyboardType = KeyboardType.Email,
             onValueChange = {
                 name = it
@@ -59,8 +61,8 @@ fun Registration(
         )
         LabeledTextField(
             initialValue = surname,
-            label = "Фамилия",
-            hint = "Введите фамилию",
+            label = stringResource(R.string.surname),
+            hint = stringResource(R.string.enter_surname),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 surname = it
@@ -68,8 +70,8 @@ fun Registration(
         )
         LabeledTextField(
             initialValue = school,
-            label = "Школа / университет",
-            hint = "Введите школу",
+            label = stringResource(R.string.school),
+            hint = stringResource(R.string.enter_school),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 school = it
@@ -77,8 +79,8 @@ fun Registration(
         )
         LabeledTextField(
             initialValue = department,
-            label = "Кафедра / институт / факультет",
-            hint = "Введите подразделение",
+            label = stringResource(R.string.department),
+            hint = stringResource(R.string.enter_department),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 department = it
@@ -86,15 +88,15 @@ fun Registration(
         )
         LabeledTextField(
             initialValue = group,
-            label = "Класс / группа",
-            hint = "Введите класс / группу",
+            label = stringResource(R.string.group),
+            hint = stringResource(R.string.enter_group),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 group = it
             }
         )
         TextButton(
-            text = "Отправить",
+            text = stringResource(R.string.register),
             onClick = {
                 onSubmit(name, surname, school, department, group)
             }

@@ -7,10 +7,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
-import com.strangenaut.attendance.core.components.LabeledTextField
-import com.strangenaut.attendance.core.components.TextButton
+import com.strangenaut.attendance.R
+import com.strangenaut.attendance.core.presentation.components.LabeledTextField
+import com.strangenaut.attendance.core.presentation.components.TextButton
 
 @Composable
 fun SignUp(
@@ -31,8 +33,8 @@ fun SignUp(
     ) {
         LabeledTextField(
             initialValue = email,
-            label = "Какой у вас электронный адрес?",
-            hint = "Введите адрес",
+            label = stringResource(R.string.what_is_your_email),
+            hint = stringResource(R.string.enter_email),
             keyboardType = KeyboardType.Email,
             onValueChange = {
                 email = it
@@ -40,8 +42,8 @@ fun SignUp(
         )
         LabeledTextField(
             initialValue = password,
-            label = "Придумайте пароль для входа",
-            hint = "Введите пароль",
+            label = stringResource(R.string.create_password),
+            hint = stringResource(R.string.enter_password),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 password = it
@@ -49,15 +51,15 @@ fun SignUp(
         )
         LabeledTextField(
             initialValue = password,
-            label = "Повторите ввод пароль для входа",
-            hint = "Введите пароль повторно",
+            label = stringResource(R.string.repeat_created_password),
+            hint = stringResource(R.string.repeat_password),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 passwordRepetition= it
             }
         )
         TextButton(
-            text = "Отправить",
+            text = stringResource(R.string.register),
             onClick = {
                 onSubmit(email, password, passwordRepetition)
             }

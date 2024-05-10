@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Посещения</string>
+
+    <!-- Exceptions -->
+    <string name="no_connection">Отсутствует соединение</string>
+    <string name="wrong_login_or_password">Неверный логин или пароль</string>
+    <string name="weak_password">Слишком слабый пароль. Необходимо минимум 6 символов</string>
+    <string name="address_exists">Данный адрес уже зарегистрирован</string>
+    <string name="unexpected_error">Непредвиденная  ошибка</string>
+    <string name="passwords_do_not_match">Пароли не совпадают</string>
+    <string name="discipline_exists">Данный предмет уже существует</string>
+    <string name="qr_code_expired">Срок действия QR кода истёк</string>
+
+    <!-- Authentication -->
+    <string name="what_is_your_email">Какой у вас электронный адрес?</string>
+    <string name="enter_email">Введите адрес</string>
+    <string name="what_is_your_password">Какой у вас пароль?</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="sign_in">Войти</string>
+    <string name="no_account">Нет аккаунта?</string>
+    <string name="create_password">Придумайте пароль для входа</string>
+    <string name="repeat_created_password">Повторите ввод пароль для входа</string>
+    <string name="repeat_password">Введите пароль повторно</string>
+    <string name="verification_request_sent">
+        Запрос на подтверждение был отправлен на вашу почту
+    </string>
+    <string name="send_again">Отправить заново</string>
+    <string name="forgot_password">Забыли пароль?</string>
+    <string name="send_request">Отправить запрос</string>
+    <string name="until_resending">До повторной отправки: %1$d с</string>
+    <string name="name">Имя</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="surname">Фамилия</string>
+    <string name="enter_surname">Введите фамилию</string>
+    <string name="school">Школа / университет</string>
+    <string name="enter_school">Введите школу / университет</string>
+    <string name="department">Кафедра / институт / факультет</string>
+    <string name="enter_department">Введите подразделение</string>
+    <string name="group">Класс / группа</string>
+    <string name="enter_group">Введите класс / группу</string>
+    <string name="register">Зарегистрироваться</string>
+
+    <!-- Home -->
+    <string name="add_discipline">Добавить новый предмет</string>
+    <string name="what_is_discipline_name">Как называется предмет?</string>
+    <string name="enter_discipline_name">Введите название предмета</string>
+    <string name="save">Сохранить</string>
+    <string name="choose_discipline">Выберите предмет</string>
+    <string name="participants_list">Список участников</string>
+    <string name="stop_lesson">Остановить занятие</string>
+    <string name="join">Присоединиться</string>
+    <string name="scan_qr">Просканируйте QR код на устройстве преподавателя</string>
+    <string name="statistics">Статистика</string>
+    <string name="lessons_attended">занятий посещено</string>
+    <string name="lessons_hosted">занятий проведено</string>
+    <string name="join_description">
+        Вы можете присоединиться, приложив ваш телефон к телефону
+        преподавателя или просканировав QR код. Если у вас отсутствует
+        интернет - соединение или вы столкнулись с другими проблемами,
+        попросите преподавателя отметить вас на занятии вручную
+    </string>
+    <string name="host">Начать занятие</string>
+    <string name="host_description">
+        Выберите существующий предмет или добавьте новый, чтобы начать
+        сессию. Ученики могут подключаться по QR коду, но вы также
+        можете добавлять учеников вручную
+    </string>
+    <string name="updating_qr">Обновляем QR код…</string>
+
+    <!-- Statistics -->
+    <string name="attended">посещено</string>
+    <string name="empty">Здесь пока что пусто</string>
+    <string name="lesson_attended">Занятие посещено</string>
+    <string name="teacher">Преподаватель</string>
+    <string name="lesson_hosted">Занятие проведено</string>
+    <string name="participants">Участники</string>
+    <string name="date_of_hosting">Дата и время проведения</string>
+    <string name="participants_count">Участников:</string>
+    <string name="history">История</string>
+    <string name="attendances">Посещения</string>
+
+    <!-- Settings -->
+    <string name="settings">Настройки</string>
+    <string name="personal_info">Персональная информация</string>
+    <string name="app_version">Версия приложения:</string>
+    <string name="sign_out">Выйти из аккаунта</string>
+    <string name="theme">Тема приложения</string>
+    <string name="system_theme">Системная</string>
+    <string name="light_theme">Светлая</string>
+    <string name="dark_theme">Тёмная</string>
+
+    <!-- Dates -->
+    <string name="today">Сегодня</string>
+    <string name="yesterday">Вчера</string>
+
+    <!-- Months -->
+    <string name="january">%1$d января</string>
+    <string name="february">%1$d февраля</string>
+    <string name="march">%1$d марта</string>
+    <string name="april">%1$d апреля</string>
+    <string name="may">%1$d мая</string>
+    <string name="june">%1$d июня</string>
+    <string name="july">%1$d июля</string>
+    <string name="august">%1$d августа</string>
+    <string name="september">%1$d сентября</string>
+    <string name="october">%1$d октября</string>
+    <string name="november">%1$d ноября</string>
+    <string name="december">%1$d декабря</string>
+
+    <!-- Other -->
+    <string name="copied_to_clipboard">Скопировано в буфер обмена</string>
+</resources>

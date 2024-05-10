@@ -12,12 +12,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
-import com.strangenaut.attendance.core.components.ClickableText
-import com.strangenaut.attendance.core.components.LabeledClickableText
-import com.strangenaut.attendance.core.components.LabeledTextField
-import com.strangenaut.attendance.core.components.TextButton
+import com.strangenaut.attendance.R
+import com.strangenaut.attendance.core.presentation.components.ClickableText
+import com.strangenaut.attendance.core.presentation.components.LabeledClickableText
+import com.strangenaut.attendance.core.presentation.components.LabeledTextField
+import com.strangenaut.attendance.core.presentation.components.TextButton
 
 @Composable
 fun SignIn(
@@ -37,8 +39,8 @@ fun SignIn(
     ) {
         LabeledTextField(
             initialValue = email,
-            label = "Какой у вас электронный адрес?",
-            hint = "Введите адрес",
+            label = stringResource(R.string.what_is_your_email),
+            hint = stringResource(R.string.enter_email),
             keyboardType = KeyboardType.Email,
             onValueChange = {
                 email = it
@@ -46,8 +48,8 @@ fun SignIn(
         )
         LabeledTextField(
             initialValue = password,
-            label = "Какой у вас пароль?",
-            hint = "Введите пароль",
+            label = stringResource(R.string.what_is_your_password),
+            hint = stringResource(R.string.enter_password),
             keyboardType = KeyboardType.Password,
             onValueChange = {
                 password = it
@@ -59,20 +61,20 @@ fun SignIn(
                 .padding(horizontal = 12.dp)
         ) {
             ClickableText(
-                text = "Забыли пароль?",
+                text = stringResource(R.string.forgot_password),
                 textStyle = MaterialTheme.typography.bodySmall,
                 onClick = onForgotPassword
             )
         }
         TextButton(
-            text = "Отправить",
+            text = stringResource(R.string.sign_in),
             onClick = {
                 onSubmit(email, password)
             }
         )
         LabeledClickableText(
-            label = "Нет аккаунта?",
-            text = "Зарегистрироваться",
+            label = stringResource(R.string.no_account),
+            text = stringResource(R.string.register),
             textStyle = MaterialTheme.typography.bodySmall,
             onClick = onSignUp
         )

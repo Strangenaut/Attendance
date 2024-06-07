@@ -55,10 +55,9 @@
     <string name="lessons_attended">lessons attended</string>
     <string name="lessons_hosted">lessons conducted</string>
     <string name="join_description">
-        You can join by putting your phone to the teacher\'s phone
-        or by scanning the QR code. If you do not have internet connection
-        or if you are experiencing other problems, ask the teacher
-        to manually mark you for the class
+        You can join by scanning the QR code on a teacher\'s phone. If you do not have internet
+        connection or if you are experiencing other problems, ask the teacher to manually mark you
+        for the class
     </string>
     <string name="host">Begin lesson</string>
     <string name="host_description">

@@ -81,8 +81,10 @@ class AuthRepositoryImpl @Inject constructor(
     }
 
     override suspend fun registerAccount(user: User) = try {
+        val documentId = auth.currentUser!!.uid
+
         store.collection(USERS_COLLECTION_PATH)
-            .document(user.email)
+            .document(documentId)
             .set(user)
             .await()
         Success(true)
